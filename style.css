@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(3, 12, 11, 0.747);
+}
+
+#game-container {
+  height: 100vmin;
+  width: 100vmin;
+  border: 1.2vmin solid rgb(109, 0, 0);
+  background: rgba(239, 249, 250, 0.836);
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+}
+
+.snake {
+  background-color: hsl(123, 93%, 57%);
+  border: 0.25vmin solid black;
+  border-radius: 30%;
+}
+.food {
+  background-color: hsl(50, 100%, 50%);
+  border: 0.25vmin solid black;
+
+}
+
+.head {
+  background-color: hsl(0, 96%, 55%);
+  border: 0.25vmin solid black;
+  position: relative;
+  border-radius: 25%;
+}
+
+.head::before {
+  content: "";
+  height: .75vmin;
+  width: .5vmin;
+  background: yellow;
+  position: absolute;
+  left: 20%;
+  top:10%;
+}
+
+.head::after {
+    content: "";
+    height: .75vmin;
+    width: .5vmin;
+    background: yellow;
+    position: absolute;
+    right: 20%;
+    top:10%;
+  }
